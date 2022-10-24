@@ -1,10 +1,13 @@
 import './ExpenseItem.css';
 
 function ExpenseItem(props) {
- 
   return (
     <div className="expense-item">
-      <div>{props.date.toISOString()}</div>
+      <div>
+        <div>{props.date.toLocaleString('en-US', { month: 'long' })}</div>
+        <div>Year</div>
+        <div>Day</div>
+      </div>
 
       <div className="expense-item__description">
         <h2> {props.title}</h2>
