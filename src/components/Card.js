@@ -1,10 +1,13 @@
-import "./Card.css";
+import React from 'react';
+
+import './Card.css';
 
 //this Card components act like a wrapper component
-function Card(props) {
-  return (
-    <div className="card">{props.children}</div>
-  )
-}
+const Card = (props) => {
+  //Allow dynamic classes from everywhere to work with the wrapper class "card"
+  const classes = 'card ' + props.className;
+
+  return <div className={classes}>{props.children}</div>;
+};
 
 export default Card;
