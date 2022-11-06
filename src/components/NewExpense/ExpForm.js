@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './ExpForm.css';
 
-function ExpForm() {
+function ExpForm(props) {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
@@ -51,6 +51,7 @@ function ExpForm() {
     };
     console.log(expenseData);
 
+    props.onSaveExpenseData();
     //Clear input field after user submit data
     setEnteredTitle('');
     setEnteredAmount('');
