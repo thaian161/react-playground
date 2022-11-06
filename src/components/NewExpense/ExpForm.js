@@ -20,7 +20,7 @@ function ExpForm() {
     //   enteredTitle: event.target.value,
     // });
 
-    //use prevState to make sure we have the most updated state object
+    //if your State update depends on the previous State => use prevState to make sure we have the most updated state object
     setUserInput((prevState) => {
       return { ...prevState, enteredTitle: event.target.value };
     });
