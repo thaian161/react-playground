@@ -47,8 +47,14 @@ function ExpForm() {
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate,
+      date: new Date(enteredDate),
     };
+    console.log(expenseData);
+
+    //Clear input field after user submit data
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   };
 
   return (
@@ -56,7 +62,11 @@ function ExpForm() {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label> Title </label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input
+            type="text"
+            onChange={titleChangeHandler}
+            value={enteredTitle}
+          />
         </div>
 
         <div className="new-expense__control">
@@ -66,6 +76,7 @@ function ExpForm() {
             min="0.01"
             step="0.01"
             onChange={amountChangeHandler}
+            value={enteredAmount}
           />
         </div>
 
@@ -76,6 +87,7 @@ function ExpForm() {
             min="2020-01-01"
             max="2024-01-01"
             onChange={dateChangeHandler}
+            value={enteredDate}
           />
         </div>
       </div>
