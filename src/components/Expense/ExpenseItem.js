@@ -9,10 +9,10 @@ const ExpenseItem = (props) => {
 const [title, setTitle]= useState(props.title);
 
 // function to use with button onClick
-  const clickHandler = ()=>{
-    setTitle("Updated");
-    console.log(title)
-  }
+  // const clickHandler = ()=>{
+  //   setTitle("Updated");
+  //   console.log(title)
+  // }
 
   return (
     <Card className='expense-item'>
@@ -23,7 +23,7 @@ const [title, setTitle]= useState(props.title);
         <div className='expense-item__price'>${props.amount}</div>
       </div>
 
-      <button onClick={clickHandler}>Change Title</button>
+      {/* <button onClick={clickHandler}>Change Title</button> */}
 
     </Card>
   );
