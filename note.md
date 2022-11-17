@@ -36,23 +36,27 @@ From ExpensesFilter component to the parent component
   - accessing props in `ExpensesFilter` by using ` value={props.selected}` in select tag
   - now whatever is the initial State that set in `Expenses.js` will be reflected in broswer from `ExpenesesFilter` component
 
-  ## => Summary: 
+## => Summary: 
 
-  __*How can we communicate from one of our components to a parent/higher lever components?*__
+__*How can we communicate from one of our components to a parent/higher lever components?*__
   We can accept a function via props and call it from inside the lower level (child) component to then trigger some action in the parent component which passed the function
   
-  __*Why do we need extra state instead of just using regular JS vbariables?*__
+__*Why do we need extra state instead of just using regular JS vbariables?*__
   Bc standard JS cariables don't cause React components to be re-evaluated > calling useState will update state value
 
 
-  ## 3: Stateless vs Statefull component
+## 3: Stateless vs Statefull component
   - Dumb = presentational = stateless components => `ExpensesItem.js` has no state, it is there just to present data
   - Smart = statefull components = components that manages states
   - Note that those above are just terms used in React, dumb components does not mean it is negative or bad
 
+  <br>
+  
   ---
 
-  # Rendering Lists & Conditional Content - working with dynamic content
 
-  ## 1: Rendering List of Data
-    - in `Expenses.js`, our `ExpenseItem` is not dynamic. In real life, we don't know in advance how many ExpenseItem will be rendering in the app => we need to rendering list of ExpensesItem dynamically
+# Rendering Lists & Conditional Content - working with dynamic content
+
+## 1: Rendering Lists of Data
+  - in `Expenses.js`, our `ExpenseItem` is not dynamic. In real life, we don't know in advance how many ExpenseItem will be rendering in the app => we need to rendering list of ExpensesItem dynamically
+  - use an array method [array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
