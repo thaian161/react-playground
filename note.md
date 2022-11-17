@@ -85,3 +85,12 @@ __*Why do we need extra state instead of just using regular JS vbariables?*__
 ```
 
 ## 2: Using Statefull Lists
+The goal of this section is to dynamic update expenses items when user filter the year or add more items to the app
+
+- move the expense array out of App.js, rename the array to DUMMY_EXPENSES
+- import useState to App.js 
+- set up useState, use DUMMY_EXPENSES as initial state
+```
+  const [ expenses, setExpenses] = useState(DUMMY_EXPENSES);
+```
+- create function `expenseHandler` and save new state to setExpenses
