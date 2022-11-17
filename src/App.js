@@ -32,7 +32,6 @@ const App = () => {
 
   return (
     <div>
-      <ExpensesFilter />
       <NewExpense />
       <Expenses items={expenses} />
     </div>
