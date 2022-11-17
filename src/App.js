@@ -1,4 +1,5 @@
 import Expenses from './components/Expense/Expenses';
+import ExpensesFilter from './components/Expense/ExpensesFilter';
 import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
 
   return (
     <div>
+      <ExpensesFilter />
       <NewExpense />
       <Expenses items={expenses} />
     </div>
