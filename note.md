@@ -51,7 +51,7 @@ __*Why do we need extra state instead of just using regular JS vbariables?*__
   - Note that those above are just terms used in React, dumb components does not mean it is negative or bad
 
   <br>
-  
+
   ---
 
 
@@ -60,3 +60,28 @@ __*Why do we need extra state instead of just using regular JS vbariables?*__
 ## 1: Rendering Lists of Data
   - in `Expenses.js`, our `ExpenseItem` is not dynamic. In real life, we don't know in advance how many ExpenseItem will be rendering in the app => we need to rendering list of ExpensesItem dynamically
   - use an array method [array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+  - dynamic change the hard code of
+```
+<ExpenseItem
+  title={props.items[0].title}
+  amount={props.items[0].amount}
+  date={props.items[0].date}
+/>
+<ExpenseItem
+  title={props.items[1].title}
+  amount={props.items[1].amount}
+  date={props.items[1].date}
+/>
+```
+  to rendering lists of data using map()
+```
+{props.items.map((expense) => (
+  <ExpenseItem
+    title={expense.title}
+    amount={expense.amount}
+    date={expense.date}
+  />
+))}
+```
+
+## 2: Using Statefull Lists
