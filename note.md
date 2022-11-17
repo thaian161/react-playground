@@ -34,4 +34,7 @@ From ExpensesFilter component to the parent component
   - accessing props in `ExpensesFilter` by using ` value={props.selected}` in select tag
   - now whatever is the initial State that set in `Expenses.js` will be reflected in broswer from `ExpenesesFilter` component
 
-  #
+  # Stateless vs Statefull component
+    - Dumb = presentational = stateless components => `ExpensesItem.js` has no state, it is there just to present data
+    - Smart = statefull components = components that manages states
+    - Note that those above are just terms used in React, dumb components does not mean it is negative or bad
