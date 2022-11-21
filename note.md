@@ -93,4 +93,12 @@ The goal of this section is to dynamic update expenses items when user filter th
 ```
   const [ expenses, setExpenses] = useState(DUMMY_EXPENSES);
 ```
-- create function `expenseHandler` and save new state to setExpenses
+- create function `addExpenseHandler` and save new state to setExpenses
+``` const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
+```
+- having props `onAddExpense` point to function `addExpenseHandler` in NewExpense component
+- 

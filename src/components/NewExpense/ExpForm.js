@@ -51,7 +51,7 @@ function ExpForm(props) {
     };
     console.log(expenseData);
 
-    props.onSaveExpenseData();
+    props.onSaveExpenseData(expenseData);
     //Clear input field after user submit data
     setEnteredTitle('');
     setEnteredAmount('');
