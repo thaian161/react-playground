@@ -102,3 +102,6 @@ The goal of this section is to dynamic update expenses items when user filter th
 ```
 - having props `onAddExpense` point to function `addExpenseHandler` in NewExpense component
 - 
+
+## 3: Understanding "KEYS"
+- add `key={expense.id}` to `props.items.map` in `Expenses.js` component => help react identify the individual items in your rendering lists
