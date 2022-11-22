@@ -8,6 +8,7 @@
   - Lifting State Up
   - Rendering Lists & Conditional Content
 
+<br>
 
 ## 2. [Styling React Components](https://github.com/thaian161/react-playground/tree/main/styling-react-components) - this folder is used to practice:
   - CSS Classes Dynamically
