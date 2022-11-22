@@ -105,3 +105,10 @@ The goal of this section is to dynamic update expenses items when user filter th
 
 ## 3: Understanding "KEYS"
 - add `key={expense.id}` to `props.items.map` in `Expenses.js` component => help react identify the individual items in your rendering lists
+
+## 4: Implement Filter function
+- in `Expenses.js` add `filteredExpenses`
+- use [.filter method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) to filter all items - props.items
+- call method `.getFullYear` on the Date Object then convert to string using `toString()` medthod > because the year is a string - line 9 useState('2020')
+- now as we have the `filteredExpenses` function, replace `props.items.map` to `filteredExpenses.map`
+
