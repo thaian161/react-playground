@@ -174,3 +174,6 @@ if (filteredExpenses.length > 0) {
 
 then rendering it as {filterExpenseContent}
 ```
+
+## 4: Adding Conditional Return Statements
+- the Expenses.js is good but it is pretty long, we can seperate it into another component, let's called it `ExpensesList.js`
