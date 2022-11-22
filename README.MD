@@ -1,4 +1,4 @@
-# REACT PLAYGROUND PROJECT - Learning and practicing React thru building projects
+# REACT PLAYGROUND - Learning and practicing React thru building projects
 
 
 ## 1. [Expenses App](https://github.com/thaian161/react-playground/tree/main/Expenses-app) - an app to track user expenses with a fiter by year feature and conduct a simple spending colunm chart. Those following concepts are used to built this Expense App:
