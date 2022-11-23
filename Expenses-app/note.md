@@ -265,3 +265,10 @@ or use camelCase backgroundColor
 ```
 style = {{backgroundColor: 'blue'}}
 ```
+
+**Task 2:** Set up ExpensesChart.js under Expense folder 
+- create new file named `ExpensesChart.js` under Expenses folder
+- import `Chart.js` into `ExpensesChart`
+- set up `dataPoints` by creating a `chartDataPoints` array, within the array we will have a bunch of objects since we expected to map the object out to `Chart component`
+- look at filtered expenses, sum up expenses for all different months to assign it to our dataPoint
+- 
