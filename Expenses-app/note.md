@@ -178,4 +178,53 @@ then rendering it as {filterExpenseContent}
 ## 4: Adding Conditional Return Statements
 - the Expenses.js is good but it is pretty long, we can seperate it into another component, let's called it `ExpensesList.js`
 - moving the `filterExpenseContent` logic from `Expenses.js` to `ExpensesList.js`
+- refactor both `Expenses` and `ExpensesList` components accordingly 
+=> semantically way to write logic in react
 
+## 5: Adding Conditional Return Statements
+```
+ if (props.items.length === 0) {
+    return <h2 className="expenses-list__fallback"> Found No Expenses in {props.selected}</h2>
+  }
+```
+
+## 6: Conditional rendering Add Expense Button || Expense Form
+- in `NewExpense.js` add useState
+```
+const [isEditing, setIsEditing ]=useState(false);
+```
+- create `startEditingHandler` to handle onClick event on the Add New Expense button
+- use conditional statement `&&` to rendering either the `<button>` or `ExpForm` accordingly to the State of `isEditing`
+- now we need a `Cancel Button` in the `ExpForm` 
+- set the `<Button> Cancel </Button>` to `type="button` so when we hit the button, the form won't be submitted 
+- in `NewExpense.js`, create a `stopEditingHandler` function to set the state back to `setIsEditing(false)` 
+- how do we get to link the `stopEditingHandler` function from `NewExpense.js` and use it in the `ExpForm.js` component? using PROPS => create props `onCancelEdiditng`!!!
+   **Step 1:** in `NewExpense.js` create a prop named `onCancelEdiditng` and point it to the `stopEdidtingHandler` function
+   **Step 2:** access `onCancelEditing` in `ExpForm.js` by creating a `onClick` and point it to `{props.onCancelEditing}`
+  
+**NEW EXPENSE COMPONENT**  
+```
+   const stopEdidtingHandler=()=>{
+    setIsEditing(false);
+  }
+
+  {<ExpForm 
+      onCancelEdiditng ={stopEdidtingHandler} 
+   />}
+```
+
+**EXPENSE FORM COMPONENT**
+```
+<button type="button" onClick ={props.onCancelEdiditng} > Cancel </button>
+```
+
+- finally, we want to display the Add New Expense button after user submit AKA after user click on Add Expense button. We can set the state back to default `setIsEditing(false)`  
+```
+ {!isEditing && 
+    <button 
+      onClick ={startEditingHandler}> Add New Expense 
+    </button>
+  }
+```
+
+## 7: Adding the Chart
