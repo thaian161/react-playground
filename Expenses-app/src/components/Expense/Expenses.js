@@ -1,6 +1,7 @@
 import Card from '../UI-Wrapper/Card';
 import ExpensesFilter from './ExpensesFilter';
-import ExpensesList from './ExpensesList'
+import ExpensesList from './ExpensesList';
+import ExpensesChart from './ExpensesChart';
 
 import { useState } from 'react';
 
@@ -18,8 +19,6 @@ const Expenses = (props) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
- 
-
   return (
     <div>
       <Card className="expenses">
@@ -27,11 +26,9 @@ const Expenses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
+        <ExpensesChart expenses={filteredExpenses} />
 
-        <ExpensesList  
-          selected={filteredYear} 
-          items ={filteredExpenses}
-        />
+        <ExpensesList selected={filteredYear} items={filteredExpenses} />
 
         {/* <ExpenseItem
           title={props.items[0].title}

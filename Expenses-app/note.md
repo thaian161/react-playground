@@ -292,3 +292,6 @@ const dataPointValues = props.dataPoints.map( dataPoint => dataPoint.value);
 const totalMax = Math.max(...dataPointValues);
 ```
 - replace dynamic value of `maxValue` from `{null}` to `{totalMax}` 
+
+**Task 5:** Use ExpensesChart.js in Expenses.js 
+- import `ExpensesChart` into `Expenses.js` and hook up `expenses props` to `{filteredExpenses}`
