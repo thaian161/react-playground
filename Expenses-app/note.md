@@ -271,4 +271,12 @@ style = {{backgroundColor: 'blue'}}
 - import `Chart.js` into `ExpensesChart`
 - set up `dataPoints` by creating a `chartDataPoints` array, within the array we will have a bunch of objects since we expected to map the object out to `Chart component`
 - look at filtered expenses, sum up expenses for all different months to assign it to our dataPoint
-- 
+- iterate/looping thru `props.expenses` 
+- `date` object => using `.getMonth` method to extract the month from date object. Note, date object starting at 0, therefore January = 0, then Febuary = 1 and so on
+```
+for (const expense in props.expenses){
+    const expenseMonth = expense.date.getMonth(); // starting at 0 => Jan = 0
+    chartDataPoints[expenseMonth].value += expense.amount;
+  }
+```
+- we already establish props.dataPoints in `Chart.js`, now it is time to hook up dataPoints into the `<Chart />`
