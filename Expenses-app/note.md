@@ -248,4 +248,20 @@ const [isEditing, setIsEditing ]=useState(false);
 - do not forget to add `key` when doing rendering list of data. Usually key can be used with and id, but in the case we can use label as the unique key as each label is unique without repetition `key={dataPoint.label}`
 
 **Task 2:** Set up ChartBar.js
-- 
+- hook up `{props.label}` to the chart-bar__label div
+- create function to showcase the % fill of the app => `barFillHeight` 
+- calculate % of the fill
+```
+barFillHeight = Math.round(props.value / props.maxValue + 100) + '%';
+```
+- setting `style` dynamically. we see 2 curly braces `style={{}}` because one curly braces is the syntax for the dynamic value, another curly braces is because that dynamic value is a Javascript Object which has also created with curly braces.
+- when using CSS inline for `style={{}}`, there are 2 way to write it:
+
+wrap everything in quote 'background-color'
+```
+style = {{ 'background-color' : 'blue'}}
+```
+or use camelCase backgroundColor
+```
+style = {{backgroundColor: 'blue'}}
+```
