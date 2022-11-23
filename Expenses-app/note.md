@@ -228,3 +228,19 @@ const [isEditing, setIsEditing ]=useState(false);
 ```
 
 ## 7: Adding the Chart
+- create 2 new components `Chart.js` and `ChartBar.js` in a new `Chart` folder under Components folder
+- in `Chart` we will rendering a bunch of `ChartBar` based on the datapoints we have
+- using `map` method to map over the array of datapoints and rendering `ChartBar` within `Chart` accordingly => we have to create dataPoints props in `ChartBar` and make sure every datapoint has a `value` property
+
+**Chart.js**
+```
+{props.dataPoints.map( (datapoint) => (
+      <ChartBar 
+        key={dataPoint.label}
+        value={dataPoint.value}
+        maxValue={null}
+        label={dataPoint.label} />
+        ))
+      }
+```
+- do not forget to add `key` when doing rendering list of data. Usually key can be used with and id, but in the case we can use label as the unique key as each label is unique without repetition `key={dataPoint.label}`
