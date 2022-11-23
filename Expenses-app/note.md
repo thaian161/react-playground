@@ -266,7 +266,7 @@ or use camelCase backgroundColor
 style = {{backgroundColor: 'blue'}}
 ```
 
-**Task 2:** Set up ExpensesChart.js under Expense folder 
+**Task 3:** Set up ExpensesChart.js under Expense folder 
 - create new file named `ExpensesChart.js` under Expenses folder
 - import `Chart.js` into `ExpensesChart`
 - set up `dataPoints` by creating a `chartDataPoints` array, within the array we will have a bunch of objects since we expected to map the object out to `Chart component`
@@ -280,3 +280,15 @@ for (const expense in props.expenses){
   }
 ```
 - we already establish props.dataPoints in `Chart.js`, now it is time to hook up dataPoints into the `<Chart />`
+
+**Task 4:** Calculate total maxValue in Chart.js component
+- look at all the months and find the biggest value across all months => that would be represented in our chart
+- transform dataPoint object to array of number by mapping it 
+```
+const dataPointValues = props.dataPoints.map( dataPoint => dataPoint.value);
+```
+- [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) takes in a LIST OF AGRUMENTS not array, we need to use the [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to unpack them into standalone agruments
+```
+const totalMax = Math.max(...dataPointValues);
+```
+- replace dynamic value of `maxValue` from `{null}` to `{totalMax}` 
