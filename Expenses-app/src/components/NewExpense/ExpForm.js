@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import './ExpForm.css';
+import { useState } from "react";
+import "./ExpForm.css";
 
 function ExpForm(props) {
-  const [enteredTitle, setEnteredTitle] = useState('');
-  const [enteredAmount, setEnteredAmount] = useState('');
-  const [enteredDate, setEnteredDate] = useState('');
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
   // => combine all 3 states above into 1 useState object
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: '',
@@ -53,9 +53,9 @@ function ExpForm(props) {
 
     props.onSaveExpenseData(expenseData);
     //Clear input field after user submit data
-    setEnteredTitle('');
-    setEnteredAmount('');
-    setEnteredDate('');
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
   };
 
   return (
@@ -94,7 +94,10 @@ function ExpForm(props) {
       </div>
 
       <div className="new-expense__actions">
-        <button type="button" onClick ={props.onCancelEdiditng} > Cancel </button>
+        <button type="button" onClick={props.onCancelEdiditng}>
+          {" "}
+          Cancel{" "}
+        </button>
         <button type="submit"> Add Expense</button>
       </div>
     </form>

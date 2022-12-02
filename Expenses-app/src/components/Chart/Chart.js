@@ -1,10 +1,9 @@
-import './Chart.css';
-import ChartBar from './ChartBar';
+import "./Chart.css";
+import ChartBar from "./ChartBar";
 
 function Chart(props) {
-
-  // transform dataPoint object to array of number 
-  const dataPointValues = props.dataPoints.map( dataPoint => dataPoint.value);
+  // transform dataPoint object to array of number
+  const dataPointValues = props.dataPoints.map((dataPoint) => dataPoint.value);
   // find the max number in the ...dataPointValues array
   const totalMax = Math.max(...dataPointValues);
 

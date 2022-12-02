@@ -142,7 +142,9 @@ The goal of this section is to dynamic update expenses items when user filter th
           ))
         )}
 ```
+
 - however, the code above is too long and hard to read. We can split it into 2 stand alone expressions like the below:
+
 ```
 {filteredExpenses.length === 0 && ( <p>No Expenses Found In {filteredYear} </p> )}
 
@@ -156,6 +158,7 @@ The goal of this section is to dynamic update expenses items when user filter th
   />
 ))}
 ```
+
 - this is good but still long and hard to read, let's refactor it using a new variabl called `filterExpenseContent`
 
 ```
@@ -176,12 +179,14 @@ then rendering it as {filterExpenseContent}
 ```
 
 ## 4: Adding Conditional Return Statements
+
 - the Expenses.js is good but it is pretty long, we can seperate it into another component, let's called it `ExpensesList.js`
 - moving the `filterExpenseContent` logic from `Expenses.js` to `ExpensesList.js`
-- refactor both `Expenses` and `ExpensesList` components accordingly 
-=> semantically way to write logic in react
+- refactor both `Expenses` and `ExpensesList` components accordingly
+  => semantically way to write logic in react
 
 ## 5: Adding Conditional Return Statements
+
 ```
  if (props.items.length === 0) {
     return <h2 className="expenses-list__fallback"> Found No Expenses in {props.selected}</h2>
@@ -189,40 +194,46 @@ then rendering it as {filterExpenseContent}
 ```
 
 ## 6: Conditional rendering Add Expense Button || Expense Form
+
 - in `NewExpense.js` add useState
+
 ```
 const [isEditing, setIsEditing ]=useState(false);
 ```
+
 - create `startEditingHandler` to handle onClick event on the Add New Expense button
 - use conditional statement `&&` to rendering either the `<button>` or `ExpForm` accordingly to the State of `isEditing`
-- now we need a `Cancel Button` in the `ExpForm` 
-- set the `<Button> Cancel </Button>` to `type="button` so when we hit the button, the form won't be submitted 
-- in `NewExpense.js`, create a `stopEditingHandler` function to set the state back to `setIsEditing(false)` 
+- now we need a `Cancel Button` in the `ExpForm`
+- set the `<Button> Cancel </Button>` to `type="button` so when we hit the button, the form won't be submitted
+- in `NewExpense.js`, create a `stopEditingHandler` function to set the state back to `setIsEditing(false)`
 - how do we get to link the `stopEditingHandler` function from `NewExpense.js` and use it in the `ExpForm.js` component? using PROPS => create props `onCancelEdiditng`!!!
-   **Step 1:** in `NewExpense.js` create a prop named `onCancelEdiditng` and point it to the `stopEdidtingHandler` function
-   **Step 2:** access `onCancelEditing` in `ExpForm.js` by creating a `onClick` and point it to `{props.onCancelEditing}`
-  
-**NEW EXPENSE COMPONENT**  
+  **Step 1:** in `NewExpense.js` create a prop named `onCancelEdiditng` and point it to the `stopEdidtingHandler` function
+  **Step 2:** access `onCancelEditing` in `ExpForm.js` by creating a `onClick` and point it to `{props.onCancelEditing}`
+
+**NEW EXPENSE COMPONENT**
+
 ```
    const stopEdidtingHandler=()=>{
     setIsEditing(false);
   }
 
-  {<ExpForm 
-      onCancelEdiditng ={stopEdidtingHandler} 
+  {<ExpForm
+      onCancelEdiditng ={stopEdidtingHandler}
    />}
 ```
 
 **EXPENSE FORM COMPONENT**
+
 ```
 <button type="button" onClick ={props.onCancelEdiditng} > Cancel </button>
 ```
 
-- finally, we want to display the Add New Expense button after user submit AKA after user click on Add Expense button. We can set the state back to default `setIsEditing(false)`  
+- finally, we want to display the Add New Expense button after user submit AKA after user click on Add Expense button. We can set the state back to default `setIsEditing(false)`
+
 ```
- {!isEditing && 
-    <button 
-      onClick ={startEditingHandler}> Add New Expense 
+ {!isEditing &&
+    <button
+      onClick ={startEditingHandler}> Add New Expense
     </button>
   }
 ```
@@ -230,14 +241,16 @@ const [isEditing, setIsEditing ]=useState(false);
 ## 7: Adding the Chart
 
 **Task 1:** Set up Chart.js
+
 - create 2 new components `Chart.js` and `ChartBar.js` in a new `Chart` folder under Components folder
 - in `Chart` we will rendering a bunch of `ChartBar` based on the datapoints we have
 - using `map` method to map over the array of datapoints and rendering `ChartBar` within `Chart` accordingly => we have to create dataPoints props in `ChartBar` and make sure every datapoint has a `value` property
 
 **Chart.js**
+
 ```
 {props.dataPoints.map( (datapoint) => (
-      <ChartBar 
+      <ChartBar
         key={dataPoint.label}
         value={dataPoint.value}
         maxValue={null}
@@ -245,53 +258,69 @@ const [isEditing, setIsEditing ]=useState(false);
         ))
       }
 ```
+
 - do not forget to add `key` when doing rendering list of data. Usually key can be used with and id, but in the case we can use label as the unique key as each label is unique without repetition `key={dataPoint.label}`
 
 **Task 2:** Set up ChartBar.js
-- hook up `{props.label}` to the chart-bar__label div
-- create function to showcase the % fill of the app => `barFillHeight` 
+
+- hook up `{props.label}` to the chart-bar\_\_label div
+- create function to showcase the % fill of the app => `barFillHeight`
 - calculate % of the fill
+
 ```
 barFillHeight = Math.round(props.value / props.maxValue + 100) + '%';
 ```
+
 - setting `style` dynamically. we see 2 curly braces `style={{}}` because one curly braces is the syntax for the dynamic value, another curly braces is because that dynamic value is a Javascript Object which has also created with curly braces.
 - when using CSS inline for `style={{}}`, there are 2 way to write it:
 
 wrap everything in quote 'background-color'
+
 ```
 style = {{ 'background-color' : 'blue'}}
 ```
+
 or use camelCase backgroundColor
+
 ```
 style = {{backgroundColor: 'blue'}}
 ```
 
-**Task 3:** Set up ExpensesChart.js under Expense folder 
+**Task 3:** Set up ExpensesChart.js under Expense folder
+
 - create new file named `ExpensesChart.js` under Expenses folder
 - import `Chart.js` into `ExpensesChart`
 - set up `dataPoints` by creating a `chartDataPoints` array, within the array we will have a bunch of objects since we expected to map the object out to `Chart component`
 - look at filtered expenses, sum up expenses for all different months to assign it to our dataPoint
-- iterate/looping thru `props.expenses` 
+- iterate/looping thru `props.expenses`
 - `date` object => using `.getMonth` method to extract the month from date object. Note, date object starting at 0, therefore January = 0, then Febuary = 1 and so on
+
 ```
 for (const expense in props.expenses){
     const expenseMonth = expense.date.getMonth(); // starting at 0 => Jan = 0
     chartDataPoints[expenseMonth].value += expense.amount;
   }
 ```
+
 - we already establish props.dataPoints in `Chart.js`, now it is time to hook up dataPoints into the `<Chart />`
 
 **Task 4:** Calculate total maxValue in Chart.js component
+
 - look at all the months and find the biggest value across all months => that would be represented in our chart
-- transform dataPoint object to array of number by mapping it 
+- transform dataPoint object to array of number by mapping it
+
 ```
 const dataPointValues = props.dataPoints.map( dataPoint => dataPoint.value);
 ```
+
 - [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) takes in a LIST OF AGRUMENTS not array, we need to use the [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to unpack them into standalone agruments
+
 ```
 const totalMax = Math.max(...dataPointValues);
 ```
-- replace dynamic value of `maxValue` from `{null}` to `{totalMax}` 
 
-**Task 5:** Use ExpensesChart.js in Expenses.js 
+- replace dynamic value of `maxValue` from `{null}` to `{totalMax}`
+
+**Task 5:** Use ExpensesChart.js in Expenses.js
+
 - import `ExpensesChart` into `Expenses.js` and hook up `expenses props` to `{filteredExpenses}`
