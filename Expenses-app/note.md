@@ -206,26 +206,26 @@ const [isEditing, setIsEditing ]=useState(false);
 - now we need a `Cancel Button` in the `ExpForm`
 - set the `<Button> Cancel </Button>` to `type="button` so when we hit the button, the form won't be submitted
 - in `NewExpense.js`, create a `stopEditingHandler` function to set the state back to `setIsEditing(false)`
-- how do we get to link the `stopEditingHandler` function from `NewExpense.js` and use it in the `ExpForm.js` component? using PROPS => create props `onCancelEdiditng`!!!
-  **Step 1:** in `NewExpense.js` create a prop named `onCancelEdiditng` and point it to the `stopEdidtingHandler` function
+- how do we get to link the `stopEditingHandler` function from `NewExpense.js` and use it in the `ExpForm.js` component? using PROPS => create props `onCancelEditing`!!!
+  **Step 1:** in `NewExpense.js` create a prop named `onCancelEditing` and point it to the `stopEditingHandler` function
   **Step 2:** access `onCancelEditing` in `ExpForm.js` by creating a `onClick` and point it to `{props.onCancelEditing}`
 
 **NEW EXPENSE COMPONENT**
 
 ```
-   const stopEdidtingHandler=()=>{
+   const stopEditingHandler=()=>{
     setIsEditing(false);
   }
 
   {<ExpForm
-      onCancelEdiditng ={stopEdidtingHandler}
+      onCancelEditing ={stopEditingHandler}
    />}
 ```
 
 **EXPENSE FORM COMPONENT**
 
 ```
-<button type="button" onClick ={props.onCancelEdiditng} > Cancel </button>
+<button type="button" onClick ={props.onCancelEditing} > Cancel </button>
 ```
 
 - finally, we want to display the Add New Expense button after user submit AKA after user click on Add Expense button. We can set the state back to default `setIsEditing(false)`

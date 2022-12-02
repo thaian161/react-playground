@@ -1,7 +1,7 @@
-import "./NewExpense.css";
-import { useState } from "react";
+import './NewExpense.css';
+import { useState } from 'react';
 
-import ExpForm from "./ExpForm";
+import ExpForm from './ExpForm';
 
 const NewExpense = (props) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -10,7 +10,7 @@ const NewExpense = (props) => {
     setIsEditing(true);
   };
 
-  const stopEdidtingHandler = () => {
+  const stopEditingHandler = () => {
     setIsEditing(false);
   };
 
@@ -33,7 +33,7 @@ const NewExpense = (props) => {
       {isEditing && (
         <ExpForm
           onSaveExpenseData={saveExpenseDataHandler}
-          onCancelEdiditng={stopEdidtingHandler}
+          onCancelEditing={stopEditingHandler}
         />
       )}
     </div>
