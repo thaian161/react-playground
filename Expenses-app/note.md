@@ -324,3 +324,14 @@ const totalMax = Math.max(...dataPointValues);
 **Task 5:** Use ExpensesChart.js in Expenses.js
 
 - import `ExpensesChart` into `Expenses.js` and hook up `expenses props` to `{filteredExpenses}`
+
+# Use Prettier on Command Line
+
+1. Install `npm -g i prettier`
+2. Run `prettier`
+3. Format all file in project `prettier -w .`
+4. Once done formatting, do 1 big commit for PR so it won't confuse whoever approve the PR
+
+# Git Commit
+
+Revise 1 commit (accidentally commit and want to un-commit) `git checkout .`
