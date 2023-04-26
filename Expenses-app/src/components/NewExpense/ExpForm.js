@@ -97,7 +97,9 @@ function ExpForm(props) {
         <button type="button" onClick={props.onCancelEditing}>
           Cancel
         </button>
-        <button type="submit"> Add Expense</button>
+        <button type="submit">
+          Add Expense
+        </button>
       </div>
     </form>
   );
