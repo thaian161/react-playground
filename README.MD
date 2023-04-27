@@ -1,4 +1,11 @@
-# REACT PLAYGROUND - Learning and practicing React thru building projects
+<div align="center">
+
+<p align="center" style="margin:1rem 0 0 0.5rem; color:#2C9ACBFF; ">REACT PLAYGROUND</p>
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&duration=5001&pause=10000&color=2C9ACB&center=true&vCenter=true&multiline=true&width=650&height=65&lines=Learning+and+practicing+React+thru+building+projects)](https://git.io/typing-svg)
+
+</div>
+
 
 
 ## [1. Expenses App](https://github.com/thaian161/react-playground/tree/main/Expenses-app) - an app to track user expenses with a fiter by year feature and conduct a simple spending colunm chart. Those following concepts are used to built this Expense App:
@@ -69,7 +76,7 @@ Look at components tree in React DevTools - Components tab
 
 <br>
 
-## **A - useEffect**
+## [A - useEffect](https://github.com/thaian161/react-playground/tree/main/5%20-%20Effects-Reducers-Context/useEffect)
 ### **5.1 - What is "Side Effects" and introducing "useEffect" hook**
 Side Effects are:
   - Store data in Browser Storage
