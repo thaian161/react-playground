@@ -39,3 +39,5 @@ render(
   </Wrapper>
 );
 ```
+
+#### Styled Component and Dynamic Props
