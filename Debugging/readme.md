@@ -10,7 +10,7 @@
 
 2. "addGoadsHandler" is not defined: Typo in function name, it should be addGoalsHandler
 
-3. Case sensitive, for example <div> not <Div>, `onClick` not `onclick`
+3. Case sensitive, for example `<div> not <Div>`, `onClick` not `onclick`
 
 ## 2 - Debugging and Analyzing React Apps
 - When there are no error message output on console and the the app compile normally, where would we be looking for bug to debug?
