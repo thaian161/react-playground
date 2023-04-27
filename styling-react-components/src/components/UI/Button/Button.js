@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 // Now the button becomes the method of the styled obj
 const Button = styled.button`
+  width: 100%;
   font: inherit;
   padding: 0.5rem 1.5rem;
   border: 1px solid #8b005d;
@@ -12,6 +13,11 @@ const Button = styled.button`
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
   cursor: pointer;
   
+  // Mobile device
+  @media (min-width: 768px){
+    width:auto;
+  }
+
   &:focus {
     outline: none;
   }

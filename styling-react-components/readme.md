@@ -65,3 +65,17 @@ const FormControl = styled.div`
 
 <FormControl invalid={!isValid}> 
 ```
+
+#### Styled Component and Media Query
+- In Button.js file; use media query in the backtick like below
+```
+const Button = styled.button`
+  // Mobile device
+  @media (min-width: 768px){
+    width:auto;
+  }
+`
+```
+
+### 2 - Using `CSS Modules` 
+Beside using `Styled Components`, we can also use `CSS MODULES` to avoid style spills/leaks into component. Some people do refer to have CSS written separately in css file.
