@@ -1,8 +1,8 @@
 <div align="center">
 
-<p align="center" style="margin:1rem 0 0 0.5rem; color:#2C9ACBFF; ">REACT PLAYGROUND</p>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=35&duration=1&pause=10000&color=DA8BAE&center=true&vCenter=true&multiline=true&width=750&height=78&lines=REACT+PLAYGROUND)](https://git.io/typing-svg)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&duration=5001&pause=10000&color=2C9ACB&center=true&vCenter=true&multiline=true&width=650&height=65&lines=Learning+and+practicing+React+thru+building+projects)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=23&duration=5001&pause=10000&color=F99FC7&center=true&vCenter=true&multiline=true&width=750&height=65&lines=Learning+%26+Practicing+React+Thru+Building+Projects)](https://git.io/typing-svg)
 
 </div>
 
