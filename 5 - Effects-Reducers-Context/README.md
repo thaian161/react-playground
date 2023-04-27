@@ -1,4 +1,4 @@
-### Effects, Reducers & Context
+## 5. Effects - Reducers - Context
 - Working with (Side) Effects
 - Managing more Complex State with Reducers
 - Managing App-Wide or Component-Wide State with Context
@@ -7,7 +7,9 @@
 
 <br>
 
-## 1 - What is "Side Effects" and introducing "useEffect" hook
+# useEffect
+
+## 5.1 - What is "Side Effects" and introducing "useEffect" hook
 Side Effects are:
   - Store data in Browser Storage
   - Send HTTP requests to Backend Servers
