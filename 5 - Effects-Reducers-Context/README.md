@@ -7,8 +7,9 @@
 
 <br>
 
-## [A - useEffect](https://github.com/thaian161/react-playground/tree/main/5%20-%20Effects-Reducers-Context/useEffect)
-### **5.1 - What is "Side Effects" and introducing "useEffect" hook**
+## [▷ useEffect](https://github.com/thaian161/react-playground/tree/main/5%20-%20Effects-Reducers-Context/useEffect)
+
+### **▸▸▸ 5.1 - What is "Side Effects" and introducing "useEffect" hook**
 Side Effects are:
   - Store data in Browser Storage
   - Send HTTP requests to Backend Servers
@@ -20,3 +21,8 @@ Side Effects are:
 `useEffect (() =>{ ... }, [ dependencies array ]);`
 
  ![useEffect() hook](https://github.com/thaian161/react-playground/blob/main/docs/Side%20Effect%20Hook.png)
+
+
+
+## [▷ useReducer]()
+## [▷ useContext]()
