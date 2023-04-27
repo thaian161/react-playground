@@ -14,6 +14,7 @@
 
 ## [1. Expenses App](https://github.com/thaian161/react-playground/tree/main/1%20-%20Expenses-app) - an app to track user expenses with a fiter by year feature and conduct a simple spending colunm chart. Those following concepts are used to built this Expense App:
   - Props
+  - Working with Events
   - Two-way Blinding
   - useState hook
   - Lifting State Up
