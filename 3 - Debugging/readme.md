@@ -20,11 +20,11 @@
 ## 3 - Working with break point
 - In devtool, go to `source` > go to the file that might contains the bug
 
-![Add breakpoint](https://github.com/thaian161/react-playground/blob/main/Debugging/Breakpoint.png)
+![Add breakpoint](https://github.com/thaian161/react-playground/blob/main/docs/Breakpoint.png)
 
 - Once add breakpoint, run the code again, then use `Step Into Next Function Call` button
 
 ## 4 - Using React DevTools
 Look at components tree in React DevTools - Components tab
 
-![React DevTools - Components tab](https://github.com/thaian161/react-playground/blob/main/Debugging/ReactDevTools-Components.png)
+![React DevTools - Components tab](https://github.com/thaian161/react-playground/blob/main/docs/ReactDevTools-Components.png)

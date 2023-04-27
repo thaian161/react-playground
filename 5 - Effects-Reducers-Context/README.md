@@ -3,7 +3,7 @@
 - Managing more Complex State with Reducers
 - Managing App-Wide or Component-Wide State with Context
 
-![Rule Of Hooks](https://github.com/thaian161/react-playground/blob/main/5%20-%20Effects-Reducers-Context/RuleOfHooks.png)
+![Rule Of Hooks](https://github.com/thaian161/react-playground/blob/main/docs/RuleOfHooks.png)
 
 <br>
 
@@ -18,4 +18,4 @@ Side Effects are:
 
 `useEffect (() =>{ ... }, [ dependencies array ]);`
 
- ![useEffect() hook](https://github.com/thaian161/react-playground/blob/main/5%20-%20Effects-Reducers-Context/RuleOfHooks.png)
+ ![useEffect() hook](https://github.com/thaian161/react-playground/blob/main/docs/Side%20Effect%20Hook.png)
