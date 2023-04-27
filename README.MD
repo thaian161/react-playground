@@ -12,7 +12,7 @@
 
 
 
-## [1. Expenses App](https://github.com/thaian161/react-playground/tree/main/Expenses-app) - an app to track user expenses with a fiter by year feature and conduct a simple spending colunm chart. Those following concepts are used to built this Expense App:
+## [1. Expenses App](https://github.com/thaian161/react-playground/tree/main/1%20-%20Expenses-app) - an app to track user expenses with a fiter by year feature and conduct a simple spending colunm chart. Those following concepts are used to built this Expense App:
   - Props
   - Two-way Blinding
   - useState hook
@@ -22,7 +22,7 @@
 <br>
 
 -------------
-## [2. Styling React Components](https://github.com/thaian161/react-playground/tree/main/styling-react-components) - this folder is used to practice:
+## [2. Styling React Components](https://github.com/thaian161/react-playground/tree/main/2%20-%20Styling-react-components) - this folder is used to practice:
   - CSS Classes Dynamically
   - Styled Component Library
   - Media Queries
@@ -31,7 +31,7 @@
 <br>
 
 -------------
-## [3. Debugging React App](https://github.com/thaian161/react-playground/tree/main/Debugging)
+## [3. Debugging React App](https://github.com/thaian161/react-playground/tree/main/3%20-%20Debugging)
   - Understanding Error Message
   - Debugging and Analyzing React Apps
   - Working with break point
@@ -73,7 +73,7 @@ Look at components tree in React DevTools - Components tab
 <br>
 
 -------------
-## [4. UserData App]() - the goal of this project is to utilize all the concepts and skills learned from section 1, 2 and 3
+## [4. UserData App](https://github.com/thaian161/react-playground/tree/main/4%20-%20UserData-app) - the goal of this project is to utilize all the concepts and skills learned from section 1, 2 and 3
 
 <br>
 
