@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=35&duration=1&pause=10000&color=DA8BAE&center=true&vCenter=true&multiline=true&width=750&height=57&lines=REACT+PLAYGROUND)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=38&duration=1&pause=10000&color=DA8BAE&center=true&vCenter=true&multiline=true&width=750&height=57&lines=REACT+PLAYGROUND)](https://git.io/typing-svg)
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=23&duration=5001&pause=10000&color=F99FC7&center=true&vCenter=true&multiline=true&width=750&height=65&lines=Learning+%26+Practicing+React+Thru+Building+Projects)](https://git.io/typing-svg)
 
