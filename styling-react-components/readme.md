@@ -41,3 +41,27 @@ render(
 ```
 
 #### Styled Component and Dynamic Props
+- Dynamic add className to <FormControl>
+```
+const FormControl = styled.div`
+  &.invalid input {
+    border-color: red;
+    background: #ffd7d7;
+  }
+`
+
+{/* if !isValid then add 'invalid' className */}
+  <FormControl className={!isValid && 'invalid'}> 
+```
+
+- Adapting based on props: we can also add props for <FormControl> directly in the backtick like below
+```
+const FormControl = styled.div`
+  & input {
+    border: 1px solid #ccc ${ props => (props.invalid ? 'red': '#ccc')};
+    background: ${ props => (props.invalid ? '#ffd7d7': 'transparent')};
+  }
+  `
+
+<FormControl invalid={!isValid}> 
+```
