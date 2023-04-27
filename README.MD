@@ -16,3 +16,8 @@
   - Media Queries
   - CSS modules
 
+## 3. [Debugging React App](https://github.com/thaian161/react-playground/tree/main/Debugging)
+  - Understanding Error Message
+  - Debugging and Analyzing React Apps
+  - Working with break point
+  - Using React DevTools
