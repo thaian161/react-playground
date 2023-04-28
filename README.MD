@@ -106,7 +106,7 @@ Look at components tree in React DevTools - Components tab
 Side Effects are:
 
 - Store data in Browser Storage
-- Send HTTP requests to Backend Servers
+- Send HTTP requests to Backend Servers, Fetch Data
 - Set and Manage Timers, setInterval, setTimeout
 - ...
 
