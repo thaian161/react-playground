@@ -10,6 +10,25 @@
 
 </div>
 
+ <p align="center">Table Of Content</p>
+
+- [1. Expenses App - an app to track user expenses with a filter by year feature and conduct a simple spending column chart. Those following concepts are used to built this Expense App:](#1-expenses-app---an-app-to-track-user-expenses-with-a-filter-by-year-feature-and-conduct-a-simple-spending-column-chart-those-following-concepts-are-used-to-built-this-expense-app)
+- [2. Styling React Components - this folder is used to practice:](#2-styling-react-components---this-folder-is-used-to-practice)
+- [3. Debugging React App](#3-debugging-react-app)
+  - [**▸▸▸ 3.1 - Understanding Error Message**](#-31---understanding-error-message)
+  - [**▸▸▸ 3.2 - Debugging and Analyzing React Apps**](#-32---debugging-and-analyzing-react-apps)
+  - [**▸▸▸ 3.3 - Working with break point**](#-33---working-with-break-point)
+  - [**▸▸▸ 3.4 - Using React DevTools**](#-34---using-react-devtools)
+- [4. UserData App - the goal of this project is to utilize all the concepts and skills learned from section 1, 2 and 3](#4-userdata-app---the-goal-of-this-project-is-to-utilize-all-the-concepts-and-skills-learned-from-section-1-2-and-3)
+- [5. Effects - Reducers - Context](#5-effects---reducers---context)
+  - [▷ useEffect](#-useeffect)
+  - [**▸▸▸ 5.1 - What is "Side Effects" and introducing "useEffect" hook**](#-51---what-is-side-effects-and-introducing-useeffect-hook)
+
+ <p align="center">∙・◦⏤◦・∙</p>
+
+ <br>
+ <br>
+
 ## [1. Expenses App](https://github.com/thaian161/react-playground/tree/main/1%20-%20Expenses-app) - an app to track user expenses with a filter by year feature and conduct a simple spending column chart. Those following concepts are used to built this Expense App:
 
 - Props
@@ -99,7 +118,7 @@ Look at components tree in React DevTools - Components tab
 
 <br>
 
-## [▷ useEffect](https://github.com/thaian161/react-playground/tree/main/5%20-%20Effects-Reducers-Context/useEffect)
+### [▷ useEffect](https://github.com/thaian161/react-playground/tree/main/5%20-%20Effects-Reducers-Context/useEffect)
 
 ### **▸▸▸ 5.1 - What is "Side Effects" and introducing "useEffect" hook**
 
