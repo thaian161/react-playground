@@ -140,4 +140,4 @@ test("NOT renders ' It's good to see you!!!' if the button WAS NOT CLICKED", () 
 
 ### Testing Connected Components
 
-Using `Output` component
+- Using `Output` component
