@@ -28,3 +28,27 @@
 ### Naming convention for testing file
 
 - `name of component`+.test.js => `App.test.ts` should be the test file for `App.js`
+
+- Testing function takes in 2 agruments:
+  1. **First agrument**: `renders learn react link` is the test decription, show up in test output
+  2. **Second agrument**: anonymous function contain the code that will be executed when run the test
+     - `render` function import from @testing-library/react => render the App component
+     - In the stimulated browswer, find the text /learn react/
+     - Finally check to see if the text /learn react/ is in the document or not
+
+```
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+```
+
+### How to run this test?
+
+- Script for it in `package.json`
+- Run `npm test`
+- Choose a to run all tests
