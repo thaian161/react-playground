@@ -141,3 +141,6 @@ test("NOT renders ' It's good to see you!!!' if the button WAS NOT CLICKED", () 
 ### Testing Connected Components
 
 - Using `Output` component
+- Our testing still works as `Output` still act as <p> to rendering text on screen
+
+### Testing Asynchronous Code
