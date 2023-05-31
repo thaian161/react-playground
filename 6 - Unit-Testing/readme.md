@@ -24,3 +24,7 @@
 - **REACT TESTIN LIBRARY:** We need a tool for "simulating" (rendering) our components
 
   => Both tools are already set up when using create-react-app
+
+### Naming convention for testing file
+
+- `name of component`+.test.js => `App.test.ts` should be the test file for `App.js`
