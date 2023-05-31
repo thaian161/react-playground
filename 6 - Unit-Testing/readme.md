@@ -94,3 +94,24 @@ describe("Testing the <Greeting/> component", () => {
 ```
 
 ### Testing User Interaction and State
+
+- `userEvent` from `@testing-library/user-event` helps us trigger event in virtual screen
+- `userEvent` has lots of built in func such as `click(), clear(), dbClick(), type(), hover()`
+
+```
+test("renders You just changed the text! if the button WAS CLICKED", () => {
+    // Arrange
+    render(<Greeting />);
+
+    //Act - use user-event package
+    const buttonElement = screen.getByRole("button");
+    userEvent.click(buttonElement);
+
+    // Assert
+    const outputButtonWasClicked = screen.getByText(
+      "You just changed the text",
+      { exact: false }
+    );
+    expect(outputButtonWasClicked).toBeInTheDocument();
+  });
+```
