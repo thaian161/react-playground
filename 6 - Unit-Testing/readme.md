@@ -150,7 +150,63 @@ test("NOT renders ' It's good to see you!!!' if the button WAS NOT CLICKED", () 
 - `getByRole` will fails if we have more than 1 post
 - Helpful link to know when to use "listitem" for function `getAllByRole`: https://www.w3.org/TR/html-aria/#docconformance
 - To check if the array is not empty, use `.not.toHaveLength(0);`
+
+## Test Async by using findAllByRole
+
 - Error message: _Unable to find an accessible element with the role "listitem"_
   - Why? because screen will immediately look for listitem, but the true is we need to have the HTTP request success to see all posts
   - Why? because on the first render, the state initialize with an empty array, screen won't be able to find listitem until the second render
   - In this case, we are going to use `findAllByRole`, this function will return a PROMISE, and the testing library will re-evaluate the component a couple of more time to find listitem
+
+Now we is still going to have another error message: _Matcher error: received value must have a length property whose value must be a number_
+
+- Why? because `findAllByRole` return a `PROMISE` not an `array` anymore, we no longer able to use `toHaveLength()`
+- Add `async` keyword before the anonymous func and `await` before screen.findAllByRole
+
+```
+test("renders posts if request success", async () => {
+    // Arrange
+    render(<Async />);
+
+    // Action
+
+    //Assert
+    const listItemElements = await screen.findAllByRole("listitem");
+    expect(listItemElements).not.toHaveLength(0);
+  });
+```
+
+## It worked, but still not ideal test
+
+- Why? because we actually send out HTTP request to fetch data from API
+- We run tests a lot of time causing HTTP calls multiple times. It will cause:
+  - Unnecessary network traffic, hammer our server
+  - If we have a `POST` request, the test will insert unwanted data into DB or changes thing in server
+
+### Solution would be:
+
+- Don't even sent any HTTP request
+- Have a specific testing server only
+- Also when we send real HTTP request, we rely on the server, if the server is down, our test will fail. We simply want to test if our component works or not
+- Use MOCK DATA/ Dummy func that does not send real request to server
+
+### Mocks data when testing Async
+
+- `jest.fn()` creates mock function
+
+```
+test("renders posts if request success", async () => {
+    // Arrange
+    window.fetch = jest.fn();
+    window.fetch.mockResolvedValueOnce({
+      json: async () => [{ id: "p1", title: "First post" }],
+    });
+    render(<Async />);
+
+    // Action
+
+    //Assert
+    const listItemElements = await screen.findAllByRole("listitem");
+    expect(listItemElements).not.toHaveLength(0);
+  });
+```
