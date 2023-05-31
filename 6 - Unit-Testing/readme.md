@@ -21,7 +21,7 @@
 ### Required Tools and Setup
 
 - **JEST:** We need a tool for running our tests and asserting results
-- **REACT TESTIN LIBRARY:** We need a tool for "simulating" (rendering) our components
+- **REACT TESTING LIBRARY:** We need a tool for "simulating" (rendering) our components
 
   => Both tools are already set up when using create-react-app
 
@@ -30,10 +30,10 @@
 - `name of component`+.test.js => `App.test.ts` should be the test file for `App.js`
 
 - Testing function takes in 2 agruments:
-  1. **First agrument**: `renders learn react link` is the test decription, show up in test output
-  2. **Second agrument**: anonymous function contain the code that will be executed when run the test
+  1. **First argument**: `renders learn react link` is the test description, show up in test output
+  2. **Second argument**: anonymous function contain the code that will be executed when run the test
      - `render` function import from @testing-library/react => render the App component
-     - In the stimulated browswer, find the text /learn react/
+     - In the stimulated browser, find the text /learn react/
      - Finally check to see if the text /learn react/ is in the document or not
 
 ```
@@ -52,3 +52,9 @@ test('renders learn react link', () => {
 - Script for it in `package.json`
 - Run `npm test`
 - Choose a to run all tests
+
+### Writing Tests: The Three "A"s
+
+**1. ARRANGE:** set up test data, test conditions and test environment
+**2. ACT:** run logic that should be tested (a button click to trigger a function?)
+**3. ASSERT:** look at output, compare execution results with expected results
