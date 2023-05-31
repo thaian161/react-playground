@@ -10,7 +10,7 @@
 
 - **Test combination of multiple building blocks**
 - 1 project contain **couple of integration tests**
-- Aslo important but focus on unit tests in most cases
+- Also important but focus on unit tests in most cases
 
 ### 3. End to End Tests
 
@@ -59,7 +59,7 @@ test('renders learn react link', () => {
 **2. ACT:** run logic that should be tested (a button click to trigger a function?)
 **3. ASSERT:** look at output, compare execution results with expected results
 
-### Test Suites vs Tests?
+### Test Suites (describe func) vs Tests (test func)?
 
 - We can group test into group by using `describe` function
 - `describe` function take in 2 arguments
@@ -92,3 +92,5 @@ describe("Testing the <Greeting/> component", () => {
 });
 
 ```
+
+### Testing User Interaction and State
