@@ -144,3 +144,13 @@ test("NOT renders ' It's good to see you!!!' if the button WAS NOT CLICKED", () 
 - Our testing still works as `Output` still act as <p> to rendering text on screen
 
 ### Testing Asynchronous Code
+
+- Using `Async` component
+- If we have multiple `posts`, we have to use `getAllByRole`
+- `getByRole` will fails if we have more than 1 post
+- Helpful link to know when to use "listitem" for function `getAllByRole`: https://www.w3.org/TR/html-aria/#docconformance
+- To check if the array is not empty, use `.not.toHaveLength(0);`
+- Error message: _Unable to find an accessible element with the role "listitem"_
+  - Why? because screen will immediately look for listitem, but the true is we need to have the HTTP request success to see all posts
+  - Why? because on the first render, the state initialize with an empty array, screen won't be able to find listitem until the second render
+  - In this case, we are going to use `findAllByRole`, this function will return a PROMISE, and the testing library will re-evaluate the component a couple of more time to find listitem
