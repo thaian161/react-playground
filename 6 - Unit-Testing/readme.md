@@ -29,7 +29,7 @@
 
 - `name of component`+.test.js => `App.test.ts` should be the test file for `App.js`
 
-- Testing function takes in 2 agruments:
+- `test` function takes in 2 arguments:
   1. **First argument**: `renders learn react link` is the test description, show up in test output
   2. **Second argument**: anonymous function contain the code that will be executed when run the test
      - `render` function import from @testing-library/react => render the App component
@@ -58,3 +58,37 @@ test('renders learn react link', () => {
 **1. ARRANGE:** set up test data, test conditions and test environment
 **2. ACT:** run logic that should be tested (a button click to trigger a function?)
 **3. ASSERT:** look at output, compare execution results with expected results
+
+### Test Suites vs Tests?
+
+- We can group test into group by using `describe` function
+- `describe` function take in 2 arguments
+  1. **First argument**: `put whatever description you want here` is the test description, show up in test output
+  2. **Second argument**: anonymous function contain all of the smaller `test` functions
+
+```
+import Greeting from "./Greeting";
+import { render, screen } from "@testing-library/react";
+
+describe("Testing the <Greeting/> component", () => {
+  test("render Hello World as a text", () => {
+    //Arrange
+    render(<Greeting />);
+
+    // Act
+    // ... nothing
+
+    // Assert
+    const helloWorldElement = screen.getByText(/Hello World/i);
+    expect(helloWorldElement).toBeInTheDocument();
+  });
+
+  test("render Hello World as a text", () => {
+    render(<Greeting />);
+
+    const helloWorldElement = screen.getByText("It's good to see you!!!");
+    expect(helloWorldElement).toBeInTheDocument();
+  });
+});
+
+```
