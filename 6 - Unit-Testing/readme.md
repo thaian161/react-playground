@@ -115,3 +115,27 @@ test("renders You just changed the text! if the button WAS CLICKED", () => {
     expect(outputButtonWasClicked).toBeInTheDocument();
   });
 ```
+
+- `screen.queryByText` will return `null` if not found
+
+```
+test("NOT renders ' It's good to see you!!!' if the button WAS NOT CLICKED", () => {
+    // Arrange
+    render(<Greeting />);
+
+    //Act - use user-event package
+    const buttonElement = screen.getByRole("button");
+    userEvent.click(buttonElement);
+
+    // Assert
+    const outputButtonWasClicked = screen.queryByText(
+      "It's good to see you!!!",
+      {
+        exact: false,
+      }
+    );
+    expect(outputButtonWasClicked).toBeNull();
+  });
+```
+
+### Testing Connected Components

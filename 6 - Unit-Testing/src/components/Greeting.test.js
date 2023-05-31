@@ -44,4 +44,22 @@ describe("Testing the <Greeting/> component", () => {
     );
     expect(outputButtonWasClicked).toBeInTheDocument();
   });
+
+  test("NOT renders ' It's good to see you!!!' if the button WAS NOT CLICKED", () => {
+    // Arrange
+    render(<Greeting />);
+
+    //Act - use user-event package
+    const buttonElement = screen.getByRole("button");
+    userEvent.click(buttonElement);
+
+    // Assert
+    const outputButtonWasClicked = screen.queryByText(
+      "It's good to see you!!!",
+      {
+        exact: false,
+      }
+    );
+    expect(outputButtonWasClicked).toBeNull();
+  });
 });
